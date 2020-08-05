@@ -1,0 +1,25 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs/Station
+/1_Data/Station.EFCore/obj
+/1_Data/Station.EFCore/bin/Debug/netcoreapp3.1
+/2_Entities/Station.Entity/obj
+/2_Entities/Station.Entity/bin/Debug/netcoreapp3.1
+/3_Services/Station.Repository/bin/Debug/netcoreapp3.1
+/3_Services/Station.Repository/obj
+/4_Models/Station.Model/bin/Debug/netcoreapp3.1
+/4_Models/Station.Model/obj
+/5_Component/Station.Core/bin/Debug/netcoreapp3.1
+/5_Component/Station.WcfAdapter/bin/Debug/netcoreapp3.1
+/5_Component/Station.WcfAdapter/obj
+/6_Helpers/Station.Helper/bin/Debug/netcoreapp3.1
+/6_Helpers/Station.Helper/obj
+/6_Helpers/Station.SortApply.Helper/bin/Debug/netcoreapp3.1
+/6_Helpers/Station.SortApply.Helper/obj
+/7_Common/Station.Common/bin/Debug/netcoreapp3.1
+/7_Common/Station.Common/obj
+/Station.WebApi/bin/Debug/netcoreapp3.1
+/Station.WebApi/obj
+/5_Component/Station.Core/obj/Debug/netcoreapp3.1
