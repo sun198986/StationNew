@@ -1,0 +1,15 @@
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "2.0.1",
+  "options": {
+    "inputs": [
+      "http://10.236.198.102:8888/ServiceControler?wsdl"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference"
+    ],
+    "outputFile": "Reference.cs",
+    "targetFramework": "netcoreapp3.1",
+    "typeReuseMode": "All"
+  }
+}

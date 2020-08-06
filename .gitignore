@@ -23,3 +23,6 @@
 /Station.WebApi/bin/Debug/netcoreapp3.1
 /Station.WebApi/obj
 /5_Component/Station.Core/obj/Debug/netcoreapp3.1
+/3_Services/Station.WcfServiceProxy/obj
+/5_Component/Station.OpenXml/obj
+/5_Component/Station.OpenXml/bin/Debug/netcoreapp3.1
