@@ -13,7 +13,6 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Station.Helper.Extensions;
 using Station.Model.EmployeeDto;
-using Station.Repository.RepositoryPattern;
 using Station.SortApply.Helper;
 
 namespace Station.WebApi.Controllers

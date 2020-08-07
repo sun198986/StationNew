@@ -26,3 +26,10 @@
 /3_Services/Station.WcfServiceProxy/obj
 /5_Component/Station.OpenXml/obj
 /5_Component/Station.OpenXml/bin/Debug/netcoreapp3.1
+/2_Entities/Station.EntityPattern/bin/Debug/netcoreapp3.1
+/2_Entities/Station.EntityPattern/obj
+/3_Services/Station.RepositoryPattern/bin/Debug/netcoreapp3.1
+/3_Services/Station.RepositoryPattern/obj
+/3_Services/Station.WcfServiceProxy/bin/Debug/netcoreapp3.1
+/5_Component/Station.Aspect/bin/Debug/netcoreapp3.1
+/5_Component/Station.Aspect/obj

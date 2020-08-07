@@ -1,4 +1,4 @@
-﻿using Station.Repository.RepositoryPattern;
+﻿using Station.RepositoryPattern;
 
 namespace Station.Repository.Employee
 {

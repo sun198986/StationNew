@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Station.Entity.DB2AdminPattern;
 
 namespace Station.Entity.DB2Admin
 {

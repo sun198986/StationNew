@@ -4,41 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using ServiceReference;
+using Station.Core.AppSettings;
 using Station.Core.Http;
-using Station.Core.Login;
+using Station.Core.Model;
 
 namespace Station.Core
 {
     public class ApplicationContext:IApplicationContext
     {
-        public HttpRequestLogUserModel CurrentUserLogInfo { get; set; }
+        public ApplicationContext(IOptions<Settings> settingsOptions)
+        {
+            Settings = settingsOptions.Value;
+        }
+
+        public Settings Settings { get; set; }
+
+        public HttpRequestLog CurrentLogInfo { get; set; }
+
+        public HttpRequestUserInfo CurrentLoginUserInfo { get; set; }
 
         public string Token { get; set; }
 
-        public void SetCurrentUserLogInfo(string myToken)
+        public async Task SetCurrentLogInfo(string myToken)
         {
             this.Token = myToken;
             string userLoginStr = SessionHelper.GetSession(this.Token);
-            this.CurrentUserLogInfo = JsonConvert.DeserializeObject<HttpRequestLogUserModel>(userLoginStr);
-        }
-
-        public HttpRequestLogUserModel GetCurrentUserLogInfo()
-        {
-            string userLoginStr = SessionHelper.GetSession(this.Token);
-            var userLogInfo = JsonConvert.DeserializeObject<HttpRequestLogUserModel>(userLoginStr);
-            return userLogInfo;
-        }
-
-        public async Task<HttpRequestLogModel> GetContextModel()
-        {
+            CurrentLoginUserInfo = JsonConvert.DeserializeObject<HttpRequestUserInfo>(userLoginStr);
             var context = AppHttpContext.Current;
-            HttpRequestLogModel contextModel = new HttpRequestLogModel
+            CurrentLogInfo = new HttpRequestLog
             {
                 ActionUrl = AppHttpContext.Current.Request.Path,
                 //UserId = UserId,
-                // User = user,
+                User = CurrentLoginUserInfo,
                 Headers = context.Request.Headers,
                 Host = context.Request.Host,
                 Query = context.Request.Query,
@@ -46,14 +45,13 @@ namespace Station.Core
                 Body = await ReadRequestBody(context.Request, Encoding.UTF8),
                 TraceIdentifier = AppHttpContext.Current.TraceIdentifier,
                 Protocol = AppHttpContext.Current.Request.Protocol,
-                IpAddress = AppHttpContext.Current.Request.Headers["X-Forwarded-For"].FirstOrDefault()?? AppHttpContext.Current.Connection.RemoteIpAddress.ToString(),
+                IpAddress = AppHttpContext.Current.Request.Headers["X-Forwarded-For"].FirstOrDefault() ?? AppHttpContext.Current.Connection.RemoteIpAddress.ToString(),
                 Scheme = context.Request.Scheme,
                 StartDate = DateTime.Now,
                 ContentType = context.Request.ContentType,
                 Method = context.Request.Method,
                 Result = new ResponseResultModel()
             };
-            return contextModel;
         }
 
         /// <summary>

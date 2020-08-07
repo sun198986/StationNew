@@ -14,12 +14,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\1_Data\Station.EFCore\Station.EFCore.csproj" />
-    <ProjectReference Include="..\..\2_Entities\Station.Entity\Station.Entity.csproj" />
     <ProjectReference Include="..\..\4_Models\Station.Model\Station.Model.csproj" />
-    <ProjectReference Include="..\..\5_Component\Station.Core\Station.Core.csproj" />
-    <ProjectReference Include="..\..\5_Component\Station.WcfAdapter\Station.WcfAdapter.csproj" />
     <ProjectReference Include="..\..\6_Helpers\Station.Helper\Station.Helper.csproj" />
-    <ProjectReference Include="..\..\6_Helpers\Station.SortApply.Helper\Station.SortApply.Helper.csproj" />
+    <ProjectReference Include="..\Station.RepositoryPattern\Station.RepositoryPattern.csproj" />
   </ItemGroup>
 
 </Project>

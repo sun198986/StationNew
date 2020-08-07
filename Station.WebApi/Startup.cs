@@ -14,16 +14,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using Station.Aspect.Authorization;
+using Station.Aspect.Exception;
+using Station.Aspect.Filter;
 using Station.Core;
 using Station.Core.AppSettings;
-using Station.Core.Authorization;
 using Station.EFCore.IbmDb;
 using Station.Core.ETag;
-using Station.Core.Exception;
-using Station.Core.Filter;
 using Station.Core.Http;
 using Station.Core.Swagger;
-using Station.Core.UserRoleWcf;
 using Station.SortApply.Helper;
 
 namespace Station.WebApi
@@ -98,10 +97,9 @@ namespace Station.WebApi
                 }).UseLoggerFactory(ConsoleLoggerFactory);//打印sql脚本
             });
 
-            services.Scan(scan => scan.FromAssemblies(Assembly.Load("Station.Repository"), Assembly.Load("Station.SortApply.Helper"))
+            services.Scan(scan => scan.FromAssemblies(Assembly.Load("Station.Repository"), Assembly.Load("Station.WcfServiceProxy"), Assembly.Load("Station.SortApply.Helper"))
                .AddClasses().UsingAttributes());//程序集注入
             services.AddScoped<IApplicationContext, ApplicationContext>();
-            services.AddScoped<IUserRoleControl, Core.UserRoleWcf.UserRoleControl>();
             services.AddScoped<PropertyMappingCollection>();
 
             services.AddAutoMapper(config =>

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Station.Entity.DB2Admin;
-using Station.Repository.RepositoryPattern;
+using Station.RepositoryPattern;
 
 namespace Station.Repository.StaionRegist
 {
-    public interface IRegistRepository:IRepositoryBase<Regist>
+    public interface IRegistRepository: IRepositoryBase<Regist>
     {
         /// <summary>
         /// 查询所有信息

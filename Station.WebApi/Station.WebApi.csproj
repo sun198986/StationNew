@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\3_Services\Station.Repository\Station.Repository.csproj" />
+    <ProjectReference Include="..\3_Services\Station.WcfServiceProxy\Station.WcfServiceProxy.csproj" />
+    <ProjectReference Include="..\5_Component\Station.Aspect\Station.Aspect.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
