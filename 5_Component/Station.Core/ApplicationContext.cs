@@ -19,14 +19,31 @@ namespace Station.Core
             Settings = settingsOptions.Value;
         }
 
+        /// <summary>
+        /// 配置文件信息
+        /// </summary>
         public Settings Settings { get; set; }
 
+        /// <summary>
+        /// 请求基本信息
+        /// </summary>
         public HttpRequestLog CurrentLogInfo { get; set; }
 
+        /// <summary>
+        /// 当前请求用户信息
+        /// </summary>
         public HttpRequestUserInfo CurrentLoginUserInfo { get; set; }
 
+        /// <summary>
+        /// token信息
+        /// </summary>
         public string Token { get; set; }
 
+        /// <summary>
+        /// 设置基本信息
+        /// </summary>
+        /// <param name="myToken"></param>
+        /// <returns></returns>
         public async Task SetCurrentLogInfo(string myToken)
         {
             this.Token = myToken;
