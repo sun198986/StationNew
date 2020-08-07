@@ -72,6 +72,20 @@ namespace Station.WebApi.Controllers
                 {
                     return BadRequest("无法找到对应的属性");
                 }
+
+                //PropertyMapping <RegistDto, Regist> registMapping= new PropertyMapping<RegistDto, Regist>(
+                //    new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
+                //    {
+                //        {"RegistId", new PropertyMappingValue(new List<string> {"RegistId"})},
+                //        {"RegistDate", new PropertyMappingValue(new List<string> {"RegistDate"})},
+                //        {"MaintainNumber", new PropertyMappingValue(new List<string> {"MaintainNumber"})},
+                //        {"CustomName", new PropertyMappingValue(new List<string> {"CustomName"})},
+                //        {"Address", new PropertyMappingValue(new List<string> {"Address"})},
+                //        {"Linkman", new PropertyMappingValue(new List<string> {"Linkman"})},
+                //        {"TelPhone", new PropertyMappingValue(new List<string> {"Phone"})},
+                //        {"Fax", new PropertyMappingValue(new List<string> {"Fax"})}
+                //    });
+                //mappingDictionary = registMapping.MappingDictionary;
                 mappingDictionary = _propertyMappingService.GetPropertyMapping<RegistDto, Regist>();
             }
 

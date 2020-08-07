@@ -105,7 +105,7 @@ namespace Station.WebApi
             services.AddAutoMapper(config =>
             {
                 config.ForAllMaps((a, b) => b.ForAllMembers(opt => opt.Condition((src, dest, sourceMember) => sourceMember != null)));
-            }, Assembly.Load("Station.Entity"), Assembly.Load("Station.Model"));
+            }, Assembly.Load("Station.Entity"), Assembly.Load("Station.Model"),Assembly.Load("Station.WcfServiceProxy"));
 
             services.Configure<MvcOptions>(config =>
             {
