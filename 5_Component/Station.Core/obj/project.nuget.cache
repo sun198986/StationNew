@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zI+JjHMB/m2ItO+wwkGxfx3nMnHCReiyQ/V1l15kpqp5RPwPZa3hLDJQiepCVKsViXcvnZ+1T6z2NGh0tfn6CQ==",
+  "dgSpecHash": "kcWuSoYuY2DwoQn9CdgHHifByYTlVnCpX9C502qTaYa9i8paB+XVjDo+CPYwViz2am4Hm7sOydKx0zabyzUvDA==",
   "success": true,
-  "projectFilePath": "E:\\MyProject\\StationNew\\Station\\5_Component\\Station.Core\\Station.Core.csproj",
+  "projectFilePath": "E:\\MyProject\\StationNew\\StationNew\\5_Component\\Station.Core\\Station.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\j2356\\.nuget\\packages\\marvin.cache.headers\\5.0.1\\marvin.cache.headers.5.0.1.nupkg.sha512",
     "C:\\Users\\j2356\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",

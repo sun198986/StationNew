@@ -21,5 +21,7 @@ namespace Station.EFCore.IbmDb
 
         public DbSet<Employee> Employees { get; set; }
 
+        public DbSet<Sap_Mara> Sap_Maras { get; set; }
+
     }
 }

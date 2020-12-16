@@ -91,7 +91,7 @@ namespace Station.WebApi
 
             services.AddDbContext<IbmDbContext>(options =>
             {
-                options.UseDb2(Configuration.GetConnectionString("DevelopDB"), action =>
+                options.UseDb2(Configuration.GetConnectionString("PIDB"), action =>
                 {
 
                 }).UseLoggerFactory(ConsoleLoggerFactory);//¥Ú”°sqlΩ≈±æ
